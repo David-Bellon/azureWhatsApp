@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Stats</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">WhatsApp Stats</h1>
+        <p data-translate="welcome" class="info-message">Welcome to our WhatsApp statistics page. Get insights into your favourite WhatsApp group.</p>
+
+        <div class="user-guide">
+            <h2>Note</h2>
+            <p data-translate="note1" class="instructions">WhatsApp only allows you to export the last 40k messages of a group chat. On top of that if there are
+            messages that may be wrong or something the program removes them. Just to clarify if later you see around
+            39.9k messages analyzed or something like. Hope you like it!</p>
+            <br>
+            <p data-translate="note2" class="instructions">The Data is not store or use outside this website. Don't worry about your
+                conversation with your friends. You are save.&#128512;</p>
+        </div>
+
+        <div class="user-guide">
+            <h2>User Guide</h2>
+            <div class="user-guide-item">
+                <img src="../static/image1.jpg" alt="Step 1">
+                <p>Step 1: Click on the three dots and then more.</p>
+            </div>
+            <div class="user-guide-item">
+                <img src="../static/image2.jpg" alt="Step 2">
+                <p>Step 2: Then click on export chat.</p>
+            </div>
+            <div class="user-guide-item">
+                <img src="../static/image3.png" alt="Step 3">
+                <p>Step 3: Click on without media and save it where you like.</p>
+            </div>
+        </div>
+
+        <input type="file" id="file-input" accept=".txt" style="display: none;">
+        <label for="file-input" class="button">Upload File</label>
+
+        <!-- Display selected file name -->
+        <div id="file-name" style="display: none;"></div>
+
+        <div id="statsContainer" class="image-stats" style="display: none">
+            <p class="instructions" id="days-init"></p>
+            <p class="instructions" id="days-end"></p>
+            <p class="instructions" id="total-msg"></p>
+        </div>
+
+        <div id="graphs1" class="image-stats" style="display: none">
+            <h2>Hour distribution</h2>
+            <p class="description">This graph shows the number of messages sent by hour in your group.</p>
+            <img src="" id="image1" class="images-show">
+            <button id="get-stats-button1" class="stats-button">Show Hours</button>
+        </div>
+
+        <div id="graphs2" class="image-stats" style="display: none">
+            <h2>Month distribution</h2>
+            <p class="description">This graph shows the amount of messages sent each month</p>
+            <img src="" id="image2" class="images-show">
+            <button id="get-stats-button2" class="stats-button">Show Months</button>
+        </div>
+
+        <div id="graphs3" class="image-stats" style="display: none">
+            <h2>Days distribution</h2>
+            <p class="description">Here we have the amount of messages distributed by days.</p>
+            <img src="" id="image3" class="images-show">
+            <button id="get-stats-button3" class="stats-button">Show Days</button>
+        </div>
+
+        <div id="graphs4" class="image-stats" style="display: none">
+            <h2>People Messages</h2>
+            <p class="description">The most interesting one. Here you can see how many messages each person has sent as
+            well as the amount of multimedia (photos, images, videos and sticker all combined) sent.</p>
+            <img src="" id="image4" class="images-show">
+            <button id="get-stats-button4" class="stats-button">Show Messages</button>
+        </div>
+
+        <div id="graphs5" class="image-stats" style="display: none">
+            <h2>Days Talk</h2>
+            <p class="description">The following graph shows the total number of different days a person has talk. At
+            the top you can see the number of days in total.</p>
+            <img src="" id="image5" class="images-show">
+            <button id="get-stats-button5" class="stats-button">Show Talk</button>
+        </div>
+
+        <div id="graphs6" class="image-stats" style="display: none">
+            <h2>No Talk Streak</h2>
+            <p class="description">The graph shows the maximum days that a person has spent without sending a message
+            (this includes links, photos, videos or whatever). Go and judge your friend if you can call it like that.</p>
+            <img src="" id="image6" class="images-show">
+            <button id="get-stats-button6" class="stats-button">Show Streak</button>
+        </div>
+    </div>
+
+    </div>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
